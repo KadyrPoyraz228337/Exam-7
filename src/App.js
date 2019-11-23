@@ -28,7 +28,7 @@ class App extends Component {
     addDish = name => {
         const items = [...this.state.items];
         const index = items.findIndex(elem => elem.name === name);
-        items[index].count++
+        items[index].count++;
 
         localStorage.setItem('items', JSON.stringify(items));
         this.setState({items});

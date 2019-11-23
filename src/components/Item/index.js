@@ -11,7 +11,7 @@ const Item = props => {
     }
     return (
         <div className="card" onClick={() => props.onClick(props.title)} >
-            <img src={logo} alt="Dish photo"/>
+            <img src={logo} alt=""/>
             <div>
                 <h4>{props.title}</h4>
                 <p>Prise: {props.prise}kgs</p>

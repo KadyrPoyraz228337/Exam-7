@@ -9,6 +9,7 @@ const OrderDetails = props => {
                 {props.state.map((elem, index) => {
                     total += props.prise[index].prise * elem.count;
                     return elem.count > 0 && <Detail
+                        key={elem.name}
                         name={elem.name}
                         count={elem.count}
                         prise={props.prise[index].prise * elem.count}
