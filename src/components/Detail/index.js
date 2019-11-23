@@ -1,12 +1,12 @@
 import React from 'react';
 import './style.css';
 
-const Details = () => {
+const Detail = props => {
     return (
-        <div>
-
-        </div>
+        <li>
+            <p>{props.name}<span>{props.count} {props.prise}</span></p>
+        </li>
     );
 };
 
-export default Details;
+export default Detail;

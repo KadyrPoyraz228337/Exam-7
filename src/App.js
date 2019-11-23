@@ -25,11 +25,12 @@ class App extends Component {
 
     render() {
         return (
-            <div>
-              <OrderDetails/>
-              <AddItems
-                  menu={dishesPrise}
+            <div className="appBlock">
+              <OrderDetails
+                state={this.state.items}
+                prise={dishesPrise}
               />
+              <AddItems menu={dishesPrise} />
             </div>
         );
     }
