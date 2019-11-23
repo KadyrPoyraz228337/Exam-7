@@ -27,7 +27,9 @@ class App extends Component {
         return (
             <div>
               <OrderDetails/>
-              <AddItems/>
+              <AddItems
+                  menu={dishesPrise}
+              />
             </div>
         );
     }
