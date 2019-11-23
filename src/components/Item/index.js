@@ -7,7 +7,7 @@ const Item = props => {
     if(type === 'dish') {
         logo = 'https://image.flaticon.com/icons/png/512/26/26393.png'
     } else {
-        logo = 'https://www.clipartwiki.com/clipimg/detail/43-433867_big-paper-cup-drink-soda-water-svg-png.png'
+        logo = 'https://www.pngrepo.com/png/45927/170/soft-drink.png'
     }
     return (
         <div className="card">
