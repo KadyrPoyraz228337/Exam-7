@@ -1,0 +1,7 @@
+.addItems {
+    width: 60%;
+    display: flex;
+    flex-wrap: wrap;
+    border: 1px solid #000;
+    border-radius: .25rem;
+}

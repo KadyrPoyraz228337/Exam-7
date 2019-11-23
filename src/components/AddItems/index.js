@@ -5,7 +5,7 @@ import Item from "../Item";
 const AddItems = props => {
     const prise = props.menu;
     return (
-        <div>
+        <div className="addItems">
             {prise.map(item => (
                 <Item
                     type={item.type}
