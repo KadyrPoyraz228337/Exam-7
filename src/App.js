@@ -30,9 +30,23 @@ class App extends Component {
                 state={this.state.items}
                 prise={dishesPrise}
               />
-              <AddItems menu={dishesPrise} />
+              <AddItems
+                  menu={dishesPrise}
+              />
             </div>
         );
+    }
+
+    addDish = name => {
+        const items = [...this.state.items];
+        const index = items.findIndex(elem => elem.name === name);
+        const item = items[index];
+
+        item.count++;
+
+        items[index] = item;
+
+        this.setState({items});
     }
 }
 

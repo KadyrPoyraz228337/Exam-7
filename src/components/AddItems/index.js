@@ -8,6 +8,7 @@ const AddItems = props => {
         <div className="addItems">
             {prise.map(item => (
                 <Item
+                    key={item.name}
                     type={item.type}
                     title={item.name}
                     prise={item.prise}
