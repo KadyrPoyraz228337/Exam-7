@@ -1,14 +1,16 @@
-import React from 'react';
+import React, {Component} from 'react';
 import OrderDetails from "./components/orderDetails";
 import AddItems from "./components/AddItems";
 
-function App() {
-  return (
-    <div>
-      <OrderDetails/>
-      <AddItems/>
-    </div>
-  );
+class App extends Component {
+    render() {
+        return (
+            <div>
+              <OrderDetails/>
+              <AddItems/>
+            </div>
+        );
+    }
 }
 
 export default App;
