@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import OrderDetails from "./components/orderDetails";
 import AddItems from "./components/AddItems";
+import "./App.css";
 
 const dishesPrise = [
     {name: 'Hamburger', prise: 80, type: 'dish'},
@@ -12,7 +13,8 @@ const dishesPrise = [
 ];
 
 class App extends Component {
-    state = {
+    localStorage = localStorage.getItem('items');
+    state = this.localStorage ? {items: JSON.parse(localStorage.getItem('items'))} : {
         items: [
             {name: 'Hamburger', count: 0},
             {name: 'Cheeseburger', count: 0},
@@ -28,6 +30,7 @@ class App extends Component {
         const index = items.findIndex(elem => elem.name === name);
         items[index].count++
 
+        localStorage.setItem('items', JSON.stringify(items));
         this.setState({items});
     };
 
@@ -36,6 +39,7 @@ class App extends Component {
         const index = items.findIndex(elem => elem.name === name);
         items[index].count--;
 
+        localStorage.setItem('items', JSON.stringify(items));
         this.setState({items});
     }
 
