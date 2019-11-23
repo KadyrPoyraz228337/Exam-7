@@ -8,7 +8,7 @@ const AddItems = props => {
         <div>
             {prise.map(item => (
                 <Item
-                    logo={item.ico}
+                    type={item.type}
                     title={item.name}
                     prise={item.prise}
                 />
