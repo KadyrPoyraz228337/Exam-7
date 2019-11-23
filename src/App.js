@@ -23,30 +23,37 @@ class App extends Component {
         ]
     };
 
+    addDish = name => {
+        const items = [...this.state.items];
+        const index = items.findIndex(elem => elem.name === name);
+        items[index].count++
+
+        this.setState({items});
+    };
+
+    removeDish = name => {
+        const items = [...this.state.items];
+        const index = items.findIndex(elem => elem.name === name);
+        items[index].count--;
+
+        this.setState({items});
+    }
+
     render() {
+
         return (
             <div className="appBlock">
               <OrderDetails
                 state={this.state.items}
                 prise={dishesPrise}
+                onClick={this.removeDish}
               />
               <AddItems
                   menu={dishesPrise}
+                  onClicik={this.addDish}
               />
             </div>
         );
-    }
-
-    addDish = name => {
-        const items = [...this.state.items];
-        const index = items.findIndex(elem => elem.name === name);
-        const item = items[index];
-
-        item.count++;
-
-        items[index] = item;
-
-        this.setState({items});
     }
 }
 

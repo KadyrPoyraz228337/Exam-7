@@ -6,14 +6,15 @@ const AddItems = props => {
     const prise = props.menu;
     return (
         <div className="addItems">
-            {prise.map(item => (
-                <Item
+            {prise.map(item => {
+                return <Item
                     key={item.name}
                     type={item.type}
                     title={item.name}
                     prise={item.prise}
+                    onClick={() => props.onClicik(item.name)}
                 />
-            ))}
+            })}
         </div>
     );
 };

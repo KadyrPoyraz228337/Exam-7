@@ -10,7 +10,7 @@ const Item = props => {
         logo = 'https://www.pngrepo.com/png/45927/170/soft-drink.png'
     }
     return (
-        <div className="card">
+        <div className="card" onClick={() => props.onClick(props.title)} >
             <img src={logo} alt="Dish photo"/>
             <div>
                 <h4>{props.title}</h4>
